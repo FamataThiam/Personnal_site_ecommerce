@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('prix_reduit', 8, 2);
             $table->dateTime('date_debut');
             $table->dateTime('date_fin');
-            $table->string('type_promotion')->enum(['standard', 'Globale','Categorie'])->default('standard');
+            $table->enum('type_promotion', ['standard', 'Globale','Categorie'])->default('standard');
 
             $table->timestamps();
         });

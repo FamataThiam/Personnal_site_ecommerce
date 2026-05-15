@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('paiements', function (Blueprint $table) {
             $table->id();
-            $table->string('mode')->enum(['carte_bancaire', 'paypal', 'virement','transfert','especes'])->default('carte_bancaire');
+            $table->enum('mode', ['carte_bancaire', 'paypal', 'virement','transfert','especes'])->default('carte_bancaire');
             $table->decimal('montant', 8, 2);
             $table->enum('status', ['en_attente', 'termine','annule'])->default('en_attente');
             $table->foreignId('commande_id')->constrained('commandes')->onDelete('cascade');
