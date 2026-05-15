@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('promotions', function (Blueprint $table) {
+            $table->id();
+            $table->string('titre');
+            $table->text('description');
+            $table->enum('Type_reduction', ['pourcentage', 'montant'])->default('pourcentage');
+            $table->decimal('prix_reduit', 8, 2);
+            $table->dateTime('date_debut');
+            $table->dateTime('date_fin');
+            $table->string('type_promotion')->enum(['standard', 'Globale','Categorie'])->default('standard');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('promotions');
+    }
+};
