@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Utilisateur extends Model
+class Utilisateur extends Authenticatable
 {
+    use Notifiable, HasFactory;
     protected $table = 'utilisateurs';
 
     protected $fillable=[
@@ -25,7 +28,7 @@ class Utilisateur extends Model
         'couleur_dashboard',
         'pays',
         'ville',
-        'adresse',        'nombre_signalements',
+        'adresse',
         'role_id'
     ];
 

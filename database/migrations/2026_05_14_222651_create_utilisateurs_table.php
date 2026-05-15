@@ -31,8 +31,9 @@ return new class extends Migration
             $table->string('pays')->nullable();
             $table->string('ville')->nullable();
             $table->string('adresse')->nullable();
-            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
- 
+            $table->foreignId('role_id')->constrained('roles')->restrictOnDelete();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
