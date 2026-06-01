@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'Add to cart' => 'Ajouter au panier',
+    'Buy now' => 'Acheter maintenant',
+    'View details' => 'Voir les détails',
+    'Edit' => 'Modifier',
+    'Delete' => 'Supprimer',
+    'Checkout' => 'Passer à la caisse',
+    'Continue shopping' => 'Continuer vos achats',
+    'Submit' => 'Soumettre',
+    'Cancel' => 'Annuler',
+    'Register' => 'S\'inscrire',
+    'Login' => 'Se connecter',
+    'Logout' => 'Se déconnecter',
+    'Update' => 'Mettre à jour',
+    'Search' => 'Rechercher',
+    'View cart' => 'Voir le panier',
+    'Proceed to checkout' => 'Procéder au paiement',
+    'Apply' => 'Appliquer',
+    'Report' => 'Signaler',
+    'Send' => 'Envoyer',
+    'Contact' => 'Contacter',
+    'Save' => 'Enregistrer',
+    'Reset' => 'Réinitialiser',
+    'Load more' => 'Charger plus',
+    'Filter' => 'Filtrer',
+    'Sort by' => 'Trier par',
+    'Add to wishlist' => 'Ajouter à la liste de souhaits',
+    'Remove from wishlist' => 'Retirer de la liste de souhaits',
+    'View wishlist' => 'Voir la liste de souhaits',
+    'Subscribe' => 'S\'abonner',
+    'Unsubscribe' => 'Se désabonner',
+    ''
+
+];
